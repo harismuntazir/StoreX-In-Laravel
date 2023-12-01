@@ -17,7 +17,7 @@ class ProductController extends Controller
 
     public function create(): Application|Factory|View|\Illuminate\Foundation\Application
     {
-        return view('add-product');
+        return view('product/add-product');
     }
 
     /**
@@ -70,7 +70,7 @@ class ProductController extends Controller
         }
 
         $products = $query->paginate(10); // Paginate with 10 items per page
-        return view('display-product-list', ['products' => $products]);
+        return view('product/product-list', ['products' => $products]);
     }
 
 
@@ -79,14 +79,14 @@ class ProductController extends Controller
     public function product($id): View|\Illuminate\Foundation\Application|Factory|Application
     {
         $product = ProductDetail::findOrFail($id);
-        return view('product-display', ['product' => $product]);
+        return view('product/product-display', ['product' => $product]);
     }
 
     // show the old product details in the edit form
     public function edit($id): View|\Illuminate\Foundation\Application|Factory|Application
     {
         $product = ProductDetail::findOrFail($id);  // Replace ProductDetail with your actual model name
-        return view('edit-product', ['product' => $product]);
+        return view('product/edit-product', ['product' => $product]);
     }
 
     public function update(Request $request, $id): RedirectResponse
@@ -114,6 +114,6 @@ class ProductController extends Controller
     // invoice maker
     public function invoice(): Application|Factory|View|\Illuminate\Foundation\Application
     {
-        return view('invoice-maker');
+        return view('invoice/invoice-maker');
     }
 }

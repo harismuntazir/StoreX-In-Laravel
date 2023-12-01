@@ -41,7 +41,7 @@
                         About
                     </a>
                     <hr class="navbar-divider">
-                    <a class="navbar-item">
+                    <a href="{{ route('contact-us') }}" class="navbar-item">
                         Contact
                     </a>
                 </div>

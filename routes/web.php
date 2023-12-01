@@ -19,7 +19,7 @@ Route::get('/', [ProductController::class, 'list'])->name('app');
 
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard/dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Product List
@@ -48,13 +48,13 @@ Route::middleware('auth')->group(function () {
 
 // About Us
 Route::get('/about-us', function () {
-    return view('about-us');
+    return view('others/about-us');
 })->name('about-us');
 
-// Search Products
-Route::get('/search', function () {
-    return view('search-bar');
-})->name('search');
+// Contact Us
+Route::get('/contact-us', function () {
+    return view('others/contact-us');
+})->name('contact-us');
 
 // Auth routes
 require __DIR__.'/auth.php';

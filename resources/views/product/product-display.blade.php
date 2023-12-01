@@ -7,8 +7,16 @@
 @section('content')
     <div class="container mt-5">
         <div class="card">
-            <div class="label m-5">
-                <p class="subtitle is-4">{{ $product->product_name }}</p>
+            <div class="columns is-flex is-justify-content-space-between is-align-items-center m-2">
+                <div class="column is-narrow">
+                    <p class="subtitle is-4">{{ $product->product_name }}</p>
+                </div>
+
+                <div class="column is-narrow">
+                    @auth
+                        <a href="{{ route('products.edit', $product->id) }}" class="button is-primary">Edit</a>
+                    @endauth
+                </div>
             </div>
 
             <div class="box card-body">

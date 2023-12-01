@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="subtitle is-3">All Product List Available - StoreX</h1>
 
-        @include('search-bar')
+        @include('tools.search-bar')
 
         <table class="table">
             <thead>
