@@ -12,7 +12,7 @@
         <table class="table">
             <thead>
             <tr>
-                <th>ID</th>
+                <th>Product ID</th>
                 <th>Name</th>
                 <th>Sell Price</th>
                 <th>Quantity</th>
