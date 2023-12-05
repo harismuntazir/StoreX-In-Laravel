@@ -1,9 +1,11 @@
 @extends('app')
 
+<head>
+    <title>Editing {{ $product->product_name }} - StoreX</title>
+</head>
+
 @section('content')
     <div class="container">
-        <h1 class="subtitle is-3">Editing {{ $product->product_name }} - StoreX</h1>
-
         <form action="{{ route('products.update', $product->id) }}" method="POST">
             @csrf
             @method('PUT')

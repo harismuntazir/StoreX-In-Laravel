@@ -1,9 +1,10 @@
 @extends('app')
+<head>
+    <title>Add New Product - StoreX</title>
+</head>
 
 @section('content')
     <div class="container">
-        <h1 class="subtitle is-3">Add New Product - StoreX</h1>
-
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>

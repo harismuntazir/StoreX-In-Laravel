@@ -11,7 +11,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item">
-            <a class="navbar-item" href="{{ route('app') }}">Home</a>
+            <a class="navbar-item" href="{{ route('home') }}">Home</a>
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">

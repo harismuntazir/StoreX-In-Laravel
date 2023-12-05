@@ -1,8 +1,11 @@
 @extends('app')
 
+<head>
+    <title>Everything Available At - StoreX</title>
+</head>
+
 @section('content')
     <div class="container">
-        <h1 class="subtitle is-3">All Product List Available - StoreX</h1>
 
         @include('tools.search-bar')
 
@@ -24,7 +27,7 @@
                             {{ $product->product_name }}
                         </a>
                     </td>
-                    <td>{{ $product->product_sell_price }}</td>
+                    <td>{{ number_format($product->product_sell_price) }}</td>
                     <td>{{ $product->product_quantity }}</td>
                 </tr>
             @empty

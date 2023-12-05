@@ -114,6 +114,6 @@ class ProductController extends Controller
     // invoice maker
     public function invoice(): Application|Factory|View|\Illuminate\Foundation\Application
     {
-        return view('invoice/invoice-maker');
+        return view('invoice/invoice');
     }
 }

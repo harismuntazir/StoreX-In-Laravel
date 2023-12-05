@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ProductController::class, 'list'])->name('app');
+// Auth routes
+require __DIR__.'/auth.php';
+
+// the default route
+Route::get('/', [ProductController::class, 'list'])->name('home');
 
 
 Route::get('/dashboard', function () {
@@ -56,5 +60,3 @@ Route::get('/contact-us', function () {
     return view('others/contact-us');
 })->name('contact-us');
 
-// Auth routes
-require __DIR__.'/auth.php';
