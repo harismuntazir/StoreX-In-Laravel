@@ -31,6 +31,14 @@
                 Add New Products
             </a>
 
+            <a class="navbar-item" href="{{ url('logger/add-log') }}">
+                Add New Log
+            </a>
+
+            <a class="navbar-item" href="{{ url('logger/all-logs') }}">
+                All Logs
+            </a>
+
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                     More

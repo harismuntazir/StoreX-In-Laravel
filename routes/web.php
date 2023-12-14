@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PurchLog;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +49,18 @@ Route::middleware('auth')->group(function () {
 
     // Invoice Maker
     Route::get('/invoice', [ProductController::class, 'invoice'])->name('invoice');
+
+    // Form For Add Log
+    Route::get('/logger/add-log', [PurchLog::class, 'addLog'])->name('logs.add');
+
+    // Store New Log to PurchLogs
+    Route::post('/logger/add-log', [PurchLog::class, 'storeLog'])->name('logs.store');
+
+    // List All Logs
+    Route::get('/logger/all-logs', [PurchLog::class, 'list'])->name('logs.all');
+
+    // delete route
+    Route::delete('/logger/all-logs/{id}', [PurchLog::class, 'delete'])->name('logs.delete');
 });
 
 // About Us
